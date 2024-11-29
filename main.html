@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Kim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h1>Jay Kim</h1>
+        <p>Made with HTML/CSS/JavaScript</p>
+    </section>
+    
+    <section id="projects">
+        <div class="header">
+            <h1>My Projects</h1>
+        </div>
+        <div class="project_container">
+            <div class="project">
+                <div class="project_description">
+                    <h2>Chatbot</h2>
+                    <h3>Made with: ...</h3>
+                    <p>AI-powered chatbot using natural language processing</p>
+                </div>
+                <img src="project1.png" alt="project 1 image">
+            </div>
+            <div class="project">
+                <div class="project_description">
+                    <h2>Stock Prediction/Analysis</h2>
+                    <h3>Made with: ...</h3>
+                    <p>Machine learning project that develops a predictive model
+                        that analyzes stock prediction and sentiment analysis.
+                    </p>
+                </div>
+                <img src="project2.png" alt="project 1 image">
+            </div>
+            <div class="project">
+                <div class="project_description">
+                    <h2>Task Manager</h2>
+                    <h3>Made with: ...</h3>
+                    <p>Full-stack web application implementing user authentication, 
+                        database integration, and much more.</p>
+                </div>
+                <img src="project3.png" alt="project 1 image">
+            </div>
+    </section>
+    
+    <section id="skills">
+        <h1>My Skills</h1>
+        <div class="myskills">
+            <div class="skill-item">
+                <img src="logo/python.png" alt="python logo" width="80" height="auto">
+                <p>Python</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/javascript.png" alt="javascript logo" width="80" height="auto">
+                <p>Javascript</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/html.png" alt="html logo" width="80" height="auto">
+                <p>HTML</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/css.png" alt="css logo" width="80" height="auto">
+                <p>CSS</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/git.png" alt="git logo" width="80" height="auto">
+                <p>GIT</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/django.png" alt="django logo" width="80" height="auto">
+                <p>DJANGO</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/bootstrap.png" alt="bootstrap logo" width="98" height="auto">
+                <p>Bootstrap</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/pandas.png" alt="pandas logo" width="50" height="auto">
+                <p>Pandas</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/unity.png" alt="unity logo" width="80" height="auto">
+                <p>Unity</p>
+            </div>
+            <div class="skill-item">
+                <img src="logo/pygame.png" alt="pygame logo" width="80" height="auto">
+                <p>Pygame</p>
+            </div>
+        </div>
+    </section>    
+    
+    <section id="education"> 
+        <h1>My Education</h1>
+        <a href="https://uwaterloo.ca/" class="university-link" target="_blank">
+            <div class="university">
+                <img src="logo/waterloo.png" alt="waterloo logo" width="200" height="auto">
+                <div class="univ_description">
+                    <h2>University of Waterloo</h2>
+                    <h3>Honours Mathematics</h3>
+                    <p>2023 ~ 2028</p>
+                    <p>Currently in my second year of studying Mathematics at the University of Waterloo, with a strong aspiration to build a career in programming.</p>
+                </div>
+            </div>
+        </a>
+    </section>    
+    
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Please contact me directly at <u>jayjaeyikim@gmail.com</u> or through this form.</p>
+        <div class="container">
+            <form action="https://formsubmit.co/jayjaeyikim@gmail.com" method="POST">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,466 @@
+body{
+    font-family: "Nunito", sans-serif;
+    background-color: #f4f4f4;
+    background: linear-gradient(45deg, #ff6658, #ebf268); /* Gradient colors */
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite; /* Animates the gradient */
+    scroll-behavior: smooth;
+}
+
+.nunito-main {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+
+/*------------navbar--------------*/
+.navbar{
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 28px;
+    padding: 14px;
+    background-color: black;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: rgb(201, 201, 201); /* or use a hex code like #808080 */
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease
+}
+
+.navbar a:hover {
+    color: rgb(255, 255, 255);
+}
+
+ul {
+    /*Removes the bullets*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar{
+    text-align: center;
+}
+
+.navbar li{
+    display: inline;
+    width: 60px;
+    color: gray;
+    margin: 7px;
+    font-size: 0.85em;
+}
+/*------------navbar completed--------------*/
+
+/*------------home--------------*/
+
+html, body {
+    height: 100%; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin around the body */
+    overflow-x: hidden;
+}
+
+#home {
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: column;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Sets the section height to 100% of the viewport height */
+    width: 100vw; /* Sets the section width to 100% of the viewport width */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#home h1{
+    color: white;
+    margin: 0;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+#home p {
+    margin: 10px 0 0; /* Adds some space above the paragraph */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    color: white;
+}
+
+/*------------home completed--------------*/
+
+/*------------project--------------*/
+
+/* Ensure the section takes up full height and is centered */
+#projects {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    padding: 6rem 0; /* Add padding for spacing */
+}
+
+/* Rainbow gradient animation for the h1 */
+/* @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+#projects h1 {
+    color: white; /* Fallback color */
+    font-size: 2rem; /* Font size */
+    /* background: linear-gradient(270deg, #ff0080, #ff8c00, #ffec00, #8cff00, #00ff8c, #00ecff, #0080ff, #8c00ff); */
+    /* background-size: 1600% 1600%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    /* animation: rainbow 5s ease infinite; */
+}
+
+/* Container for the project cards */
+.project_container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    width: 100%; /* Take full width */
+    max-width: 900px; /* Limit the maximum width */
+    min-width: none;
+    margin: 0 auto; /* Center container */
+}
+
+/* Each project card styling */
+.project {
+    display: flex; /* Use flexbox for inner content alignment */
+    flex-direction: row; /* Arrange content vertically */
+    align-items: center; /* Center horizontally */
+    background: black; /* White background for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin: 1rem 0; /* Space between cards */
+    padding: 1rem; /* Padding inside cards */
+    border-radius: 20px; /* Rounded corners */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: background-color 0.5s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Hide parts of the image outside the card */
+}
+
+/* Hover effect for project cards */
+.project:hover {
+    background-color: #232323; /* Slightly darker color on hover */
+}
+
+/* Ensure images fill the project card without changing the card size */
+.project img {
+    width: 60%; /* Full width of the card */
+    height: 350px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to fit the fixed dimensions */
+    border-radius: 8px; /* Round top corners */
+    transform: translateX(20%) translateY(10%) rotate(0deg); /* Initially show only half of the image */
+    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+}
+
+/* Slide image in to show 85% on hover */
+.project:hover img {
+    transform: translateX(10%) translateY(10%) rotate(-5deg); /* Adjust to show 85% of the image */
+}
+
+/* Style for the project description */
+.project_description {
+    padding: 1rem; /* Padding around text */
+    text-align: left; /* Center text */
+    width: 50%;
+    color: white;
+}
+
+.project_description h2 {
+    margin: 0.5rem 0; /* Margin around heading */
+    font-size: 1.5rem; /* Heading size */
+}
+
+.project_description h3 {
+    margin: 0.5rem 0; /* Margin around subheading */
+    font-size: 1.2rem; /* Subheading size */
+}
+
+.project_description p {
+    margin: 0.5rem 0; /* Margin around paragraph */
+    font-size: 1rem; /* Paragraph size */
+}
+
+/*------------project completed--------------*/
+
+/* Custom scrollbar styles for WebKit-based browsers (Chrome, Safari) */
+body ::-webkit-scrollbar {
+    width: 0px; /* Set scrollbar width to 0 for transparent appearance */
+    height: 0px; /* Set scrollbar height to 0 for transparent appearance */
+}
+
+body ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0); /* Transparent thumb */
+}
+
+body ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); /* Transparent track */
+}
+
+/* Custom scrollbar styles for Firefox */
+body {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for other WebKit-based browsers */
+body ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/*------------skills--------------*/
+
+#skills {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    margin-top: 0%;
+    padding: 5rem;
+}
+
+#skills h1 {
+    color: white; /* Fallback color */
+    font-size: 2rem; /* Font size */
+}
+
+.myskills {
+    display: flex; /* Arrange items in a row */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 5px; /* Space between items */
+}
+
+.skill-item {
+    flex: 0 0 90px; /* Flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    flex-direction: column; /* Arrange logo and name in a column */
+    align-items: center; /* Center horizontally */
+    margin: 10px; /* Space between items */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.skill-item p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Adjust font size if needed */
+    color: black; /* Adjust text color as needed */
+}
+
+.skill-item:hover {
+    transform: scale(1.2); /* Scale up to 110% of the original size */
+}
+
+/*------------skills completed--------------*/
+
+/*------------education--------------*/
+
+#education {
+    display: flex; /* Use flexbox to center items */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    margin-top: 0%;
+    margin-top: -5%;
+    padding: 5rem; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#education h1 {
+    color: white; /* Text color for heading */
+    font-size: 2rem; /* Font size */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.university-link {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically centered */
+    background-color: black; /* Background color for the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+    width: 100%; /* Full width to fit container */
+    max-width: 900px; /* Optional: Limit maximum width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color from parent */
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
+}
+
+.university {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between logo and description */
+    width: 100%; /* Full width to fit container */
+}
+
+.university img {
+    max-width: 200px; /* Limit logo width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for spinning */
+}
+
+.univ_description {
+    display: flex;
+    flex-direction: column; /* Arrange text vertically */
+    color: white; /* Text color for description */
+}
+
+.univ_description h2,
+.univ_description h3,
+.univ_description p {
+    margin: 0; /* Remove default margins */
+    color: white; /* Text color */
+}
+
+.univ_description h2 {
+    font-size: 1.5rem; /* Font size for the main title */
+    margin-bottom: 0.5rem; /* Space below the main title */
+    margin-top: 1rem;
+}
+
+.univ_description h3 {
+    font-size: 1.2rem; /* Font size for the subtitle */
+    margin-bottom: 0.5rem; /* Space below the subtitle */
+}
+
+.univ_description p {
+    font-size: 1rem; /* Font size for the text */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 0.5rem; /* Space below paragraphs */
+}
+
+.university-link:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.university-link:hover img {
+    animation: spin 5s linear infinite; /* Apply spin animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .university {
+        flex-direction: column; /* Arrange items in a column on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .university img {
+        max-width: 100px; /* Limit logo width on smaller screens */
+    }
+
+    .univ_description {
+        text-align: center; /* Center text on smaller screens */
+        width: 100%; /* Full width for description */
+    }
+
+    .univ_description h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .univ_description h3 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .univ_description p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/*------------education completed--------------*/
+
+/*------------resume--------------*/
+
+/*------------resume completed--------------*/
+
+/*------------contanct--------------*/
+#contact {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    padding: 3rem; /* Padding around the section */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#contact h1 {
+    color: white; /* Text color for the heading */
+    font-size: 2.5rem; /* Font size */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+#contact p {
+    color: #333; /* Text color for the paragraph */
+    font-size: 1.1rem; /* Font size */
+    text-align: center; /* Center text alignment */
+    margin-bottom: 2rem; /* Space below the paragraph */
+}
+
+.container {
+    max-width: 600px; /* Limit the maximum width of the form */
+    width: 100%; /* Full width to fit container */
+}
+
+form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Arrange form elements in a column */
+    padding: 0rem; /* Padding inside the form */
+    border-radius: 14px; /* Rounded corners for the form */
+}
+
+input, textarea {
+    background-color: black;
+    color: gray;
+    border: none;
+    border-radius: 14px;
+    padding: 0.75rem; /* Padding inside form elements */
+    margin-bottom: 1rem; /* Space below form elements */
+    font-size: 1rem; /* Font size */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 150px; /* Minimum height for the textarea */
+}
+
+button {
+    background-color: black; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    padding: 0.75rem 1.5rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for background color and transform */
+}
+
+button:hover {
+    background-color: rgb(44, 44, 44); /* Darker background color on hover */
+    transform: scale(1.03);
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+/*------------contanct completed--------------*/
